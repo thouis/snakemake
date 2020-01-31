@@ -463,6 +463,7 @@ class DAG:
             if (f.is_directory and not os.path.isdir(f)) or (
                 os.path.isdir(f) and not f.is_directory
             ):
+                print("bad", f, os.path.isdir(f), f.is_directory)
                 raise ImproperOutputException(job.rule, [f])
 
         # It is possible, due to archive expansion or cluster clock skew, that
