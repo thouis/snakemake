@@ -789,6 +789,7 @@ def directory(value):
         raise SyntaxError("Remote and directory flags are mutually exclusive.")
     if is_flagged(value, "dynamic"):
         raise SyntaxError("Dynamic and directory flags are mutually exclusive.")
+    print("FLAG DIR", value)
     return flag(value, "directory")
 
 
